@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameFragment">
+
+
+    <Button
+        android:id="@+id/btnSort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/sort"
+        app:layout_constraintEnd_toEndOf="@+id/btnUndo"
+        app:layout_constraintStart_toStartOf="@+id/btnUndo"
+        app:layout_constraintTop_toBottomOf="@+id/btnUndo" />
+
+    <Button
+        android:id="@+id/btnMarkAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/mark_unmark"
+        app:layout_constraintEnd_toEndOf="@+id/btnSwap"
+        app:layout_constraintStart_toStartOf="@+id/btnSwap"
+        app:layout_constraintTop_toBottomOf="@+id/btnSwap" />
+
+    <Button
+        android:id="@+id/btnUndo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/undo"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCheck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnCheck"
+        app:layout_constraintTop_toTopOf="@+id/btnCheck" />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPlayersDeck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnSwap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/swap"
+        app:layout_constraintBottom_toTopOf="@+id/rvPlayersDeck"
+        app:layout_constraintEnd_toStartOf="@+id/btnReplace"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnReplace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/replace"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSwap"
+        app:layout_constraintEnd_toStartOf="@+id/btnCheck"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnSwap"
+        app:layout_constraintTop_toTopOf="@+id/btnSwap"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/check"
+        app:layout_constraintBottom_toBottomOf="@+id/btnReplace"
+        app:layout_constraintEnd_toStartOf="@+id/btnUndo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnReplace"
+        app:layout_constraintTop_toTopOf="@+id/btnReplace" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
